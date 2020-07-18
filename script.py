@@ -10,8 +10,7 @@ dates = []
 
 def progress(chunks,max_chunk,t_size):
     if(t_size!=-1):
-        print(((float(chunks)*float(max_chunk))/float(t_size))*100+"%","done")
-        print('\r')
+        print("%.2f"%(((float(chunks)*float(max_chunk))/float(t_size))*100)+"%","done",end="\r")
     else:
         print('Unable to determine size of download, still downloading...')
 
